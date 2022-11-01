@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar color="m">
+    <ion-title>
+      หาเส้นทางระหว่างเมือง
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div id="floating-panel">
+    <b>Start: </b>
+    <select [(ngModel)]="start" id="start" (change)="calculateAndDisplayRoute()">
+      <option value="Muang Pattani" checked>เมืองปัตตานี</option>
+      <option value="Khok pho">โคกโพธิ์</option>
+      <option value="Panare">ปะนาเระ</option>
+      <option value="Mayo">มายอ</option>
+      <option value="Thung Yang Daeng">ทุ่งยางแดง</option>
+      <option value="Sai buri">สายบุรี</option>
+      <option value="Mai Kaen">ไม้แก่น</option>
+      <option value="Yaring">ยะหริ่ง</option>
+      <option value="Yarang">ยะรัง</option>
+      <option value="Kapho">กะพ้อ</option>
+      <option value="Mae Lan">แม่ลาน</option>
+    </select><br>
+    <b>End: </b>
+    <select [(ngModel)]="end" id="end" (change)="calculateAndDisplayRoute()">
+      <option value="Muang Pattani" checked>เมืองปัตตานี</option>
+      <option value="Khok pho">โคกโพธิ์</option>
+      <option value="Panare">ปะนาเระ</option>
+      <option value="Mayo">มายอ</option>
+      <option value="Thung Yang Daeng">ทุ่งยางแดง</option>
+      <option value="Sai buri">สายบุรี</option>
+      <option value="Mai Kaen">ไม้แก่น</option>
+      <option value="Yaring">ยะหริ่ง</option>
+      <option value="Yarang">ยะรัง</option>
+      <option value="Kapho">กะพ้อ</option>
+      <option value="Mae Lan">แม่ลาน</option>
+    </select>
+    </div>
+    <div #map id="map"></div>
+</ion-content>
